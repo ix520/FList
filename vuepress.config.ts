@@ -95,5 +95,11 @@ export default defineUserConfig({
       downProxy: cloudflarePagesDownProxy()
     },
     // ... 可以配置多个挂载路径和仓库，以此类推
+    {
+  mountPath:"/example",
+  analysis:fileUrlTreeAnalysis({
+    "/test.jpg":"https://example.com/test.jpg"
+  }),
+    }
   ])
 })
